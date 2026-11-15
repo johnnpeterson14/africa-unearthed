@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Africa Unearthed by Awudi John Anani (UEB0506326): explore the Ghana, Mali, and Songhai empires, African country maps, gold, and petroleum."
+    />
+    <meta name="author" content="Awudi John Anani" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://johnnpeterson14.github.io/africa-unearthed/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://johnnpeterson14.github.io/africa-unearthed/" />
+    <meta property="og:title" content="Africa Unearthed | Awudi John Anani" />
+    <meta property="og:description" content="Explore West African empires, country maps, gold, and petroleum with Awudi John Anani." />
+    <title>Africa Unearthed | Awudi John Anani — Empires, Gold &amp; Oil</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Africa Unearthed",
+        "url": "https://johnnpeterson14.github.io/africa-unearthed/",
+        "description": "An educational exploration of West African empires, African countries, gold, and petroleum.",
+        "author": {
+          "@type": "Person",
+          "name": "Awudi John Anani"
+        }
+      }
+    </script>
+    <style>
+      :root {
+        color-scheme: light;
+        --ink: #1d2925;
+        --muted: #64736a;
+        --paper: #f5f2e9;
+        --card: #fffdf7;
+        --line: #deddd0;
+        --green: #245442;
+        --gold: #c38b27;
+        --rust: #b95e43;
+        --blue: #287c91;
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        line-height: 1.6;
+      }
+
+      a { color: inherit; }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1240px;
+        margin: auto;
+        padding: 22px 30px;
+      }
+
+      .wordmark {
+        color: var(--green);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: .14em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .student-credit {
+        display: block;
+        margin-top: 3px;
+        color: var(--muted);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        letter-spacing: .04em;
+      }
+
+      .site-nav {
+        display: flex;
+        gap: 24px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+      }
+
+      .site-nav a { text-decoration: none; }
+      .site-nav a:hover { color: var(--rust); }
+
+      .hero {
+        padding: 72px 24px 62px;
+        background: #e8ebdf;
+        text-align: center;
+      }
+
+      .eyebrow {
+        color: var(--rust);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .2em;
+        text-transform: uppercase;
+      }
+
+      h1, h2, h3, p { margin-top: 0; }
+
+      h1 {
+        max-width: 850px;
+        margin: 14px auto 18px;
+        color: var(--green);
+        font-size: clamp(42px, 7vw, 78px);
+        font-weight: 500;
+        letter-spacing: -.045em;
+        line-height: 1.02;
+      }
+
+      .hero p {
+        max-width: 700px;
+        margin: 0 auto;
+        color: #48584e;
+        font-size: clamp(16px, 2vw, 19px);
+      }
+
+      .hero-link {
+        display: inline-block;
+        margin-top: 24px;
+        padding: 11px 18px;
+        border-radius: 4px;
+        background: var(--green);
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      main {
+        width: min(1120px, calc(100% - 40px));
+        margin: 54px auto 80px;
+      }
+
+      .section-heading {
+        margin-bottom: 25px;
+      }
+
+      .section-heading h2 {
+        margin: 5px 0 8px;
+        color: var(--green);
+        font-size: clamp(30px, 4vw, 43px);
+        font-weight: 500;
+        letter-spacing: -.03em;
+        line-height: 1.15;
+      }
+
+      .section-heading p {
+        max-width: 760px;
+        margin-bottom: 0;
+        color: var(--muted);
+      }
+
+      .map-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1.65fr) minmax(260px, .85fr);
+        gap: 20px;
+        align-items: stretch;
+      }
+
+      .map-card, .info-card, .discussion-card {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--card);
+        box-shadow: 0 12px 35px rgba(37, 55, 42, .05);
+      }
+
+      .map-card { padding: 15px; }
+
+      .map-tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 2px 2px 12px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .map-tools button, .like-button, .submit-button {
+        border: 1px solid var(--line);
+        border-radius: 99px;
+        background: white;
+        color: var(--ink);
+        cursor: pointer;
+        font: inherit;
+        font-size: 12px;
+        font-weight: 700;
+        padding: 8px 12px;
+      }
+
+      .map-tools button[aria-pressed="true"] {
+        border-color: var(--green);
+        background: var(--green);
+        color: white;
+      }
+
+      .map-tools button:focus-visible, .like-button:focus-visible,
+      .submit-button:focus-visible, a:focus-visible, input:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid #e7ae4b;
+        outline-offset: 3px;
+      }
+
+      .map-scroll { overflow-x: auto; }
+
+      #africa-map {
+        display: block;
+        width: 100%;
+        min-width: 440px;
+        height: auto;
+        border-radius: 6px;
+        background: #e8efe7;
+      }
+
+      .graticule {
+        stroke: #c8d6ca;
+        stroke-width: .12;
+        stroke-dasharray: .7 .8;
+      }
+
+      .land {
+        fill: #d3ddc9;
+        stroke: #7d9782;
+        stroke-width: .42;
+        stroke-linejoin: round;
+      }
+
+      .island { fill: #d3ddc9; stroke: #7d9782; stroke-width: .35; }
+
+      .country-boundary {
+        fill: #d9e2d5;
+        stroke: #7f9682;
+        stroke-width: .24;
+        stroke-linejoin: round;
+      }
+
+      .country-boundary.featured {
+        fill: #c8d8c6;
+        stroke: #607c68;
+        stroke-width: .34;
+      }
+
+      .empire {
+        stroke-width: .45;
+        stroke-linejoin: round;
+        cursor: help;
+      }
+
+      .empire.ghana { fill: #c77c52; fill-opacity: .58; stroke: #9c573a; }
+      .empire.mali { fill: #d3a137; fill-opacity: .52; stroke: #a57920; }
+      .empire.songhai { fill: #578b75; fill-opacity: .58; stroke: #356a55; }
+
+      .map-label {
+        fill: #263a30;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: .035em;
+        paint-order: stroke;
+        stroke: #e8efe7;
+        stroke-width: .55px;
+        stroke-linejoin: round;
+        text-anchor: middle;
+      }
+
+      .country-label {
+        fill: #314d3d;
+        font-size: 6.2px;
+        letter-spacing: .08em;
+      }
+
+      .resource-marker { cursor: help; }
+      .resource-marker.gold circle { fill: #d69616; stroke: #fff8df; stroke-width: .65; }
+      .resource-marker.oil circle { fill: #293d45; stroke: #fff; stroke-width: .65; }
+      .resource-marker text {
+        fill: #21332d;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 7px;
+        font-weight: 700;
+        paint-order: stroke;
+        stroke: #e8efe7;
+        stroke-width: .8px;
+        text-anchor: middle;
+      }
+
+      .map-caption {
+        margin: 10px 4px 2px;
+        color: var(--muted);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+      }
+
+      .country-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7px;
+        margin: 20px 0 28px;
+      }
+
+      .country-nav a {
+        padding: 7px 11px;
+        border: 1px solid #dcded3;
+        border-radius: 3px;
+        background: #fbfaf5;
+        color: #355a47;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: background .15s ease, color .15s ease;
+      }
+
+      .country-nav a:hover { background: #204b3c; color: white; }
+
+      .country-profile {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(230px, .7fr);
+        gap: 12px 30px;
+        align-items: center;
+        padding: 27px 0 30px;
+        border-top: 1px solid #dcddd2;
+        scroll-margin-top: 20px;
+      }
+
+      .country-profile-header { grid-column: 1 / -1; }
+      .country-profile-header h3 {
+        margin: 0;
+        color: #204b3c;
+        font-size: 27px;
+        font-weight: 500;
+        letter-spacing: -.025em;
+      }
+
+      .country-profile-header span {
+        display: inline-block;
+        margin-top: 5px;
+        color: #9a6d2e;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+      }
+
+      .country-profile-copy p {
+        margin-bottom: 12px;
+        color: #4e5e53;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .country-profile-copy p:last-child { margin-bottom: 0; }
+      .country-profile-copy strong { color: #263d31; }
+      .country-source {
+        display: inline-block;
+        margin-top: 3px;
+        color: #356348;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        text-underline-offset: 3px;
+      }
+
+      .country-map-frame {
+        padding: 8px;
+        border: 1px solid #dce1d7;
+        border-radius: 4px;
+        background: #edf1e9;
+      }
+
+      .country-map {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 125px;
+      }
+
+      .country-map .country-boundary { fill: #d4dfd1; stroke: #8b9b8b; stroke-width: .65; }
+      .country-map .country-boundary.featured { fill: #71977d; stroke: #315d46; stroke-width: 1.1; }
+      .country-map .resource-marker.gold circle { stroke-width: 1.1; }
+      .country-map .resource-marker.oil circle { stroke-width: 1.1; }
+      .country-map .resource-marker text { font-size: 5px; stroke-width: 1.2px; }
+      .country-map-label {
+        fill: #274c37;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: .04em;
+        paint-order: stroke;
+        stroke: #edf1e9;
+        stroke-width: 2px;
+        text-anchor: middle;
+      }
+
+      .country-map-caption {
+        margin: 6px 2px 0;
+        color: #68766b;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        text-align: center;
+      }
+
+      .info-card { padding: 23px; }
+      .info-card h3 {
+        margin-bottom: 8px;
+        color: var(--green);
+        font-size: 20px;
+      }
+
+      .legend-list {
+        display: grid;
+        gap: 9px;
+        margin: 14px 0 22px;
+        padding: 0;
+        list-style: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+
+      .legend-list li { display: flex; align-items: center; gap: 9px; }
+      .swatch { width: 15px; height: 15px; border-radius: 4px; }
+      .swatch.ghana { background: #c77c52; }
+      .swatch.mali { background: #d3a137; }
+      .swatch.songhai { background: #578b75; }
+      .swatch.gold { width: 11px; height: 11px; margin: 2px; border-radius: 50%; background: #d69616; }
+      .swatch.oil { width: 11px; height: 11px; margin: 2px; border-radius: 50%; background: #293d45; }
+
+      .insight {
+        margin: 0 0 15px;
+        padding-top: 13px;
+        border-top: 1px solid var(--line);
+        color: #536258;
+        font-size: 14px;
+      }
+
+      .insight strong { color: var(--ink); }
+
+      .caution {
+        margin: 20px 0 0;
+        padding: 12px 13px;
+        border-left: 3px solid var(--gold);
+        background: #f5f0e2;
+        color: #5b584a;
+        font-size: 12px;
+      }
+
+      .history-section, .sources-section, .discussion-section { margin-top: 66px; }
+
+      .empire-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .empire-card {
+        padding: 20px;
+        border-top: 3px solid var(--gold);
+        border-radius: 5px;
+        background: #eeece2;
+      }
+
+      .empire-card:nth-child(1) { border-color: #c77c52; }
+      .empire-card:nth-child(2) { border-color: #d3a137; }
+      .empire-card:nth-child(3) { border-color: #578b75; }
+      .empire-card h3 { margin-bottom: 6px; color: var(--green); font-size: 21px; }
+      .empire-card .dates {
+        display: block;
+        margin-bottom: 10px;
+        color: var(--rust);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+      }
+      .empire-card p { margin: 0; color: #526056; font-size: 14px; }
+
+      .sources-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 22px;
+        padding-left: 18px;
+        color: var(--green);
+        font-size: 14px;
+      }
+
+      .sources-list a:hover { color: var(--rust); }
+      .sources-note { color: var(--muted); font-size: 12px; }
+
+      .discussion-card { padding: 24px; }
+      .discussion-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding-bottom: 17px;
+        border-bottom: 1px solid var(--line);
+      }
+      .discussion-top p { margin: 3px 0 0; color: var(--muted); font-size: 13px; }
+      .like-button { border-color: #e2c7c0; color: #8d4035; font-size: 14px; }
+      .like-button[aria-pressed="true"] { background: #fff0ec; }
+      .comment-form { display: grid; gap: 11px; margin: 18px 0 22px; }
+      .comment-form label {
+        color: var(--ink);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 700;
+      }
+      .comment-form input, .comment-form textarea {
+        display: block;
+        width: 100%;
+        margin-top: 5px;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        border-radius: 5px;
+        background: white;
+        color: var(--ink);
+        font: 14px Arial, Helvetica, sans-serif;
+      }
+      .comment-form textarea { min-height: 90px; resize: vertical; }
+      .submit-button {
+        justify-self: start;
+        border-color: var(--green);
+        background: var(--green);
+        color: white;
+        padding-inline: 16px;
+      }
+      .local-note { margin: 0; color: var(--muted); font-size: 11px; }
+      .comments-list { display: grid; gap: 13px; }
+      .comment {
+        padding: 13px 15px;
+        border-radius: 5px;
+        background: #f2f0e8;
+      }
+      .comment strong {
+        color: var(--green);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 12px;
+      }
+      .comment time { margin-left: 8px; color: #7d877f; font-size: 11px; }
+      .comment p { margin: 5px 0 0; color: #45554a; font-size: 14px; overflow-wrap: anywhere; }
+      .empty-comments { margin: 0; color: var(--muted); font-size: 14px; }
+
+      footer {
+        padding: 24px;
+        background: #e8ebdf;
+        color: #5b685f;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        text-align: center;
+      }
+
+      .site-header {
+        position: relative;
+        z-index: 2;
+        max-width: none;
+        min-height: 82px;
+        padding: 14px max(30px, calc((100% - 1180px) / 2));
+        border-bottom: 1px solid rgba(31, 57, 44, .1);
+        background: rgba(250, 249, 243, .96);
+      }
+
+      .wordmark {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 12px;
+        letter-spacing: .16em;
+      }
+
+      .wordmark::before {
+        display: inline-grid;
+        width: 30px;
+        height: 30px;
+        place-items: center;
+        border: 1px solid #c9a35a;
+        border-radius: 50%;
+        color: #a97826;
+        content: "E";
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 0;
+      }
+
+      .student-credit { margin-left: 40px; font-size: 10px; }
+      .student-credit a { text-decoration-color: #b7c0b6; text-underline-offset: 2px; }
+      .site-nav { align-items: center; gap: 8px; }
+      .site-nav a {
+        padding: 9px 13px;
+        border-radius: 3px;
+        color: #48584e;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: .045em;
+        transition: background-color .18s ease, color .18s ease;
+      }
+      .site-nav a:hover { background: #e9eee7; color: var(--green); }
+
+      .hero {
+        position: relative;
+        overflow: hidden;
+        padding: 84px 30px 78px;
+        background:
+          radial-gradient(ellipse at 83% 18%, rgba(196, 148, 67, .18), transparent 29%),
+          linear-gradient(118deg, #173b31 0%, #204b3c 56%, #1b4035 100%);
+        text-align: left;
+      }
+
+      .hero::before, .hero::after {
+        position: absolute;
+        pointer-events: none;
+        content: "";
+      }
+
+      .hero::before {
+        inset: 0;
+        opacity: .14;
+        background-image: linear-gradient(rgba(242, 231, 205, .25) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(242, 231, 205, .25) 1px, transparent 1px);
+        background-size: 58px 58px;
+        mask-image: linear-gradient(90deg, transparent 18%, #000 100%);
+      }
+
+      .hero::after {
+        top: 50%;
+        right: max(1%, calc((100% - 1250px) / 2));
+        width: clamp(240px, 30vw, 430px);
+        aspect-ratio: 1;
+        border: 1px solid rgba(228, 198, 132, .2);
+        border-radius: 48% 52% 54% 46%;
+        box-shadow: 0 0 0 24px rgba(228, 198, 132, .035), 0 0 0 55px rgba(228, 198, 132, .025);
+        transform: translateY(-50%) rotate(-22deg);
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(230px, .55fr);
+        gap: 60px;
+        align-items: center;
+        max-width: 1120px;
+        margin: auto;
+      }
+
+      .hero .eyebrow { color: #e5bd70; font-size: 10px; letter-spacing: .22em; }
+      .hero h1 {
+        max-width: 730px;
+        margin: 20px 0 18px;
+        color: #fbf8ef;
+        font-size: clamp(52px, 7.4vw, 88px);
+        letter-spacing: -.055em;
+        line-height: .98;
+      }
+
+      .hero p {
+        max-width: 640px;
+        margin: 0;
+        color: rgba(248, 246, 235, .76);
+        font-size: clamp(16px, 1.65vw, 18px);
+        line-height: 1.75;
+      }
+
+      .hero-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 18px;
+        margin-top: 30px;
+        padding: 13px 17px;
+        border: 1px solid #d6b66f;
+        border-radius: 3px;
+        background: #d6b66f;
+        color: #18382e;
+        font-size: 11px;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        transition: transform .18s ease, background-color .18s ease;
+      }
+
+      .hero-link::after { content: "↗"; font-size: 16px; }
+      .hero-link:hover { transform: translateY(-2px); background: #e4c782; }
+      .hero-note {
+        padding: 26px 0 26px 27px;
+        border-left: 1px solid rgba(230, 203, 143, .4);
+        color: #f5f0e2;
+      }
+
+      .hero-note-label {
+        display: block;
+        margin-bottom: 15px;
+        color: #e5bd70;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+      }
+
+      .hero-note strong {
+        display: block;
+        max-width: 300px;
+        font-size: 23px;
+        font-weight: 400;
+        line-height: 1.35;
+      }
+
+      .hero-facts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        margin-top: 26px;
+        padding-top: 17px;
+        border-top: 1px solid rgba(230, 203, 143, .25);
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .hero-facts b { display: block; color: #e5bd70; font-size: 21px; }
+      .hero-facts span { color: rgba(248, 246, 235, .62); font-size: 9px; letter-spacing: .08em; text-transform: uppercase; }
+
+      main { max-width: 1120px; margin-top: 70px; }
+      .section-heading { margin-bottom: 29px; }
+      .section-heading .eyebrow { color: #a56d35; }
+      .section-heading h2 {
+        margin-top: 8px;
+        color: #203d32;
+        font-size: clamp(33px, 4vw, 46px);
+        letter-spacing: -.04em;
+      }
+      .section-heading p { max-width: 700px; font-size: 15px; line-height: 1.75; }
+      .map-layout { grid-template-columns: minmax(0, 1.7fr) minmax(270px, .8fr); gap: 18px; }
+      .map-layout > * { min-width: 0; }
+      .map-card, .info-card, .discussion-card {
+        border-color: #e3e1d7;
+        border-radius: 7px;
+        box-shadow: 0 18px 48px rgba(36, 57, 43, .075);
+      }
+      .map-card { padding: 17px; }
+      .map-tools { gap: 7px; padding: 0 0 14px; }
+      .map-tools button {
+        border-color: #e5e3d9;
+        border-radius: 3px;
+        color: #45554a;
+        font-size: 10px;
+        letter-spacing: .025em;
+        transition: transform .15s ease, background-color .15s ease;
+      }
+      .map-tools button:hover { transform: translateY(-1px); }
+      .map-tools button[data-layer="ghana"][aria-pressed="true"] { border-color: #9c573a; background: #9c573a; }
+      .map-tools button[data-layer="mali"][aria-pressed="true"] { border-color: #a57920; background: #a57920; }
+      .map-tools button[data-layer="songhai"][aria-pressed="true"] { border-color: #356a55; background: #356a55; }
+      .map-tools button[data-layer="gold"][aria-pressed="true"] { border-color: #a97826; background: #a97826; }
+      .map-tools button[data-layer="oil"][aria-pressed="true"] { border-color: #293d45; background: #293d45; }
+      #africa-map { background: #edf1e9; }
+      .map-caption { font-size: 10px; line-height: 1.6; }
+
+      .info-card {
+        padding: 26px;
+        border-color: #204b3c;
+        background: #204b3c;
+        color: #f4f0e5;
+      }
+      .info-card h3 { margin-bottom: 13px; color: #f5f0e2; font-size: 24px; font-weight: 400; }
+      .legend-list { gap: 12px; margin: 0 0 23px; font-size: 11px; }
+      .legend-list li { color: rgba(248, 246, 235, .82); }
+      .insight { margin-bottom: 13px; border-color: rgba(255,255,255,.13); color: rgba(248, 246, 235, .75); font-size: 12px; line-height: 1.7; }
+      .insight strong { color: #e6c47b; }
+      .caution { margin-top: 18px; border-left-color: #e1b654; background: rgba(13, 36, 29, .45); color: rgba(248, 246, 235, .78); font-size: 11px; line-height: 1.65; }
+
+      .history-section, .sources-section, .discussion-section { margin-top: 82px; }
+      .country-section { margin-top: 82px; }
+      .country-profile:first-of-type { border-top: 0; }
+      .empire-grid { gap: 17px; }
+      .empire-card {
+        position: relative;
+        min-height: 208px;
+        padding: 24px 23px;
+        overflow: hidden;
+        border: 1px solid #e6e3d8;
+        border-top: 2px solid #c77c52;
+        border-radius: 4px;
+        background: #fcfbf6;
+        transition: transform .2s ease, box-shadow .2s ease;
+      }
+      .empire-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(36, 57, 43, .08); }
+      .empire-card::after {
+        position: absolute;
+        right: 12px;
+        bottom: -34px;
+        color: rgba(36, 84, 66, .045);
+        content: "0" counter(card);
+        counter-increment: card;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 112px;
+        line-height: 1;
+        pointer-events: none;
+      }
+      .empire-grid { counter-reset: card; }
+      .empire-card h3 { position: relative; z-index: 1; font-size: 23px; }
+      .empire-card .dates { position: relative; z-index: 1; color: #9a6d2e; font-size: 9px; letter-spacing: .14em; }
+      .empire-card p { position: relative; z-index: 1; max-width: 340px; font-size: 13px; line-height: 1.75; }
+
+      .sources-list {
+        gap: 10px;
+        padding: 0;
+        list-style: none;
+      }
+      .sources-list li {
+        flex: 1 1 30%;
+        min-width: 220px;
+        border: 1px solid #e2e0d5;
+        border-radius: 3px;
+        background: #fbfaf5;
+        transition: border-color .15s ease, transform .15s ease;
+      }
+      .sources-list li:hover { transform: translateY(-2px); border-color: #b5c5b7; }
+      .sources-list a {
+        display: block;
+        height: 100%;
+        padding: 13px 15px;
+        color: #315a46;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 1.5;
+        text-decoration: none;
+      }
+      .sources-list a::after { float: right; margin-left: 8px; color: #b18137; content: "↗"; }
+      .sources-note { font-size: 11px; }
+
+      .discussion-card { padding: 30px; }
+      .discussion-top { align-items: center; padding-bottom: 21px; }
+      .discussion-top strong { color: #234636; font-size: 19px; font-weight: 500; }
+      .discussion-top p { font-size: 12px; }
+      .like-button {
+        border-color: #e6d4ca;
+        border-radius: 3px;
+        background: #fffaf6;
+        font-size: 12px;
+        transition: background-color .15s ease, transform .15s ease;
+      }
+      .like-button:hover { transform: translateY(-1px); }
+      .like-button[aria-pressed="true"] { background: #f7e8e1; }
+      .comment-form { grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 23px; }
+      .comment-form label { font-size: 11px; letter-spacing: .03em; }
+      .comment-form label:nth-child(2) { grid-column: 1 / -1; }
+      .comment-form input, .comment-form textarea {
+        border-color: #deddd3;
+        border-radius: 3px;
+        font-size: 13px;
+      }
+      .comment-form textarea { min-height: 110px; }
+      .submit-button { border-radius: 3px; font-size: 11px; letter-spacing: .04em; }
+      .local-note { align-self: center; font-size: 10px; }
+      .comment { border-left: 2px solid #c8a05a; border-radius: 0 3px 3px 0; background: #f5f3ec; }
+
+      footer {
+        margin-top: 92px;
+        padding: 27px 24px;
+        border-top: 1px solid rgba(235, 231, 214, .18);
+        background: #173b31;
+        color: rgba(248, 246, 235, .72);
+        line-height: 1.8;
+      }
+      footer a { color: #e5bd70; }
+
+      .page-view[hidden], .home-dashboard[hidden] { display: none !important; }
+      .site-nav a[aria-current="page"] { background: #e9eee7; color: var(--green); }
+      .home-dashboard { min-height: 290px; }
+      .home-links {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .home-link-card {
+        display: flex;
+        min-height: 230px;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 22px;
+        border: 1px solid #e3e1d7;
+        border-radius: 5px;
+        background: #fcfbf6;
+        color: inherit;
+        text-decoration: none;
+        transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+      }
+
+      .home-link-card:hover {
+        transform: translateY(-3px);
+        border-color: #b6c8b7;
+        box-shadow: 0 16px 34px rgba(36, 57, 43, .08);
+      }
+
+      .home-link-number {
+        color: #9a6d2e;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: .14em;
+      }
+
+      .home-link-card > strong {
+        margin: 15px 0 6px;
+        color: #204b3c;
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      .home-link-card > span:not(.home-link-number) {
+        color: #637168;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      .home-link-card > b {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: auto;
+        padding-top: 17px;
+        color: #315a46;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 10px;
+      }
+
+      .home-link-card > b span { color: #a97826; font-size: 14px; }
+
+      @media (max-width: 800px) {
+        .site-header { flex-wrap: wrap; row-gap: 8px; }
+        .site-nav { width: 100%; justify-content: flex-start; }
+        .map-layout { grid-template-columns: 1fr; }
+        .empire-grid { grid-template-columns: 1fr; }
+        .hero-inner { grid-template-columns: 1fr; gap: 34px; }
+        .hero-note { max-width: 420px; }
+        .hero::after { right: -80px; opacity: .55; }
+        .country-profile { grid-template-columns: minmax(0, 1fr) minmax(200px, .72fr); gap: 12px 20px; }
+        .home-links { grid-template-columns: 1fr; }
+        .home-link-card { min-height: 190px; }
+      }
+
+      @media (max-width: 560px) {
+        .site-header { align-items: flex-start; padding: 14px 16px; }
+        .student-credit { max-width: 225px; margin-left: 0; font-size: 9px; line-height: 1.55; }
+        .site-nav { flex-wrap: wrap; justify-content: flex-end; gap: 1px; font-size: 10px; }
+        .site-nav a { padding: 7px; font-size: 9px; }
+        .hero { padding: 58px 20px 48px; }
+        .hero-inner { gap: 26px; }
+        .hero h1 { font-size: clamp(47px, 13vw, 66px); }
+        .hero-note { padding: 18px 0 0 18px; }
+        .hero-note strong { font-size: 20px; }
+        .hero-facts { max-width: 360px; }
+        main { width: min(100% - 30px, 1120px); margin-top: 45px; }
+        .home-dashboard { min-height: auto; }
+        .section-heading { margin-bottom: 21px; }
+        .map-card { padding: 10px; }
+        .map-tools { gap: 5px; }
+        .map-tools button { padding: 8px 9px; font-size: 9px; }
+        .info-card, .discussion-card { padding: 19px; }
+        .discussion-top { align-items: flex-start; }
+        .comment-form { grid-template-columns: 1fr; }
+        .comment-form label:nth-child(2) { grid-column: auto; }
+        .local-note { grid-row: auto; }
+        .history-section, .sources-section, .discussion-section { margin-top: 62px; }
+        .country-section { margin-top: 62px; }
+        .country-profile { grid-template-columns: 1fr; gap: 12px; }
+        .country-profile-header { grid-column: auto; }
+        .country-profile-header h3 { font-size: 24px; }
+        .country-map-frame { max-width: 100%; }
+        footer { margin-top: 65px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <a class="wordmark" href="#page-home">Africa Unearthed</a>
+        <span class="student-credit">
+          Prepared by Awudi John Anani · UEB0506326 ·
+          <a href="mailto:johnpeterson14@gmail.com">johnpeterson14@gmail.com</a>
+        </span>
+      </div>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#page-home" data-page-link="home">Home</a>
+        <a href="#page-empires" data-page-link="empires">Empires</a>
+        <a href="#page-countries" data-page-link="countries">Countries</a>
+        <a href="#page-discussion" data-page-link="discussion">Discussion</a>
+      </nav>
+    </header>
+
+    <section class="hero page-view" data-page-view="home">
+      <div class="hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow">A historical and geological overview</div>
+          <h1>West Africa through time</h1>
+          <p>
+            Explore the Ghana, Mali, and Songhai empires alongside present-day
+            African gold districts and petroleum regions. One map, two very
+            different timelines.
+          </p>
+          <a class="hero-link" href="#page-empires">Explore the map</a>
+        </div>
+        <aside class="hero-note" aria-label="About this map">
+          <span class="hero-note-label">A continent in context</span>
+          <strong>Trade shaped empires. Geology shapes resource maps.</strong>
+          <div class="hero-facts" aria-label="Map contents">
+            <div><b>03</b><span>Empires</span></div>
+            <div><b>02</b><span>Resources</span></div>
+            <div><b>01</b><span>Continent</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <main>
+      <section class="home-dashboard" data-page-view="home" aria-label="Explore the site">
+        <div class="section-heading">
+          <div class="eyebrow">Explore the project</div>
+          <h2>Choose where to begin</h2>
+          <p>Each topic opens on its own page. Use the navigation above to come back or explore another section.</p>
+        </div>
+        <div class="home-links">
+          <a class="home-link-card" href="#page-empires">
+            <span class="home-link-number">01 / HISTORY</span>
+            <strong>Empires</strong>
+            <span>Explore historical territories, timelines, and the trade networks of Ghana, Mali, and Songhai.</span>
+            <b>Open the empires page <span aria-hidden="true">↗</span></b>
+          </a>
+          <a class="home-link-card" href="#page-countries">
+            <span class="home-link-number">02 / GEOGRAPHY</span>
+            <strong>Countries</strong>
+            <span>Read country-by-country profiles with detailed locator maps and resource context.</span>
+            <b>Open the countries page <span aria-hidden="true">↗</span></b>
+          </a>
+          <a class="home-link-card" href="#page-discussion">
+            <span class="home-link-number">03 / COMMUNITY</span>
+            <strong>Discussion</strong>
+            <span>Share a question or observation about the history, geography, or resource map.</span>
+            <b>Join the discussion <span aria-hidden="true">↗</span></b>
+          </a>
+        </div>
+      </section>
+
+      <section class="page-view" data-page-view="empires" aria-label="Empires page" hidden>
+      <section id="map" aria-labelledby="map-heading">
+        <div class="section-heading">
+          <div class="eyebrow">Then &amp; now</div>
+          <h2 id="map-heading">Empires, gold &amp; oil</h2>
+          <p>
+            Turn the layers on or off to compare approximate historical
+            territories with selected modern resource locations across Africa.
+          </p>
+        </div>
+
+        <div class="map-layout">
+          <div class="map-card">
+            <div class="map-tools" aria-label="Map layers">
+              <button type="button" data-layer="ghana" aria-pressed="true">Ghana Empire</button>
+              <button type="button" data-layer="mali" aria-pressed="true">Mali Empire</button>
+              <button type="button" data-layer="songhai" aria-pressed="true">Songhai Empire</button>
+              <button type="button" data-layer="countries" aria-pressed="true">Country borders</button>
+              <button type="button" data-layer="country-names" aria-pressed="true">Profile country names</button>
+              <button type="button" data-layer="gold" aria-pressed="true">Gold</button>
+              <button type="button" data-layer="oil" aria-pressed="true">Petroleum</button>
+            </div>
+            <div class="map-scroll">
+              <svg id="africa-map" viewBox="0 0 700 650" role="img" aria-labelledby="svg-title svg-desc">
+                <title id="svg-title">Map of Africa showing historical empires and modern resource regions</title>
+                <desc id="svg-desc">
+                  Approximate shaded extents of the Ghana, Mali, and Songhai empires
+                  in West Africa, with selected gold and petroleum locations across
+                  the continent.
+                </desc>
+                <g id="map-drawing"></g>
+              </svg>
+            </div>
+            <p class="map-caption">
+              Country outlines: Natural Earth (1:110m, generalized); labels show
+              featured countries. Historic extents are approximate.
+            </p>
+          </div>
+
+          <aside class="info-card" aria-label="Map key and context">
+            <h3>Map key</h3>
+            <ul class="legend-list">
+              <li><span class="swatch ghana"></span> Ghana Empire (c. 700–1200)</li>
+              <li><span class="swatch mali"></span> Mali Empire (c. 1235–1600)</li>
+              <li><span class="swatch songhai"></span> Songhai Empire (c. 1464–1591)</li>
+              <li><span class="swatch gold"></span> Selected gold districts</li>
+              <li><span class="swatch oil"></span> Selected petroleum areas</li>
+            </ul>
+            <p class="insight">
+              <strong>Gold:</strong> West African goldfields helped sustain
+              long-distance trade. Selected examples include Bambuk and Bure,
+              as well as modern Ghana’s Ashanti region.
+            </p>
+            <p class="insight">
+              <strong>Petroleum:</strong> Modern oilfields and exploration
+              regions include Ghana’s offshore basin, the Niger Delta,
+              Algeria, Libya, and Angola.
+            </p>
+            <p class="insight">
+              <strong>Discovery is not certain:</strong> New deposits are
+              assessed through geological mapping, geophysical surveys,
+              drilling, and economic evaluation.
+            </p>
+            <p class="caution">
+              These are modern locations, not evidence that medieval empires
+              knew of or extracted petroleum. Their borders and dates varied;
+              the shaded areas are broad historical approximations.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="history-section" id="history" aria-labelledby="history-heading">
+        <div class="section-heading">
+          <div class="eyebrow">The historical lens</div>
+          <h2 id="history-heading">Three influential West African states</h2>
+          <p>
+            Their fortunes were shaped by trade networks, political authority,
+            scholarship, and many other forces—not by modern oil extraction.
+          </p>
+        </div>
+        <div class="empire-grid">
+          <article class="empire-card">
+            <h3>Ghana (Wagadu)</h3>
+            <span class="dates">c. 700–1200 CE</span>
+            <p>
+              An early Sahelian power, centered north of the modern state of
+              Ghana. It grew influential through control of regional trade,
+              including the trans-Saharan exchange in gold and salt.
+            </p>
+          </article>
+          <article class="empire-card">
+            <h3>Mali</h3>
+            <span class="dates">c. 1235–1600 CE</span>
+            <p>
+              A large empire in the western Sahel. Under rulers including
+              Mansa Musa, its cities and trans-Saharan connections linked
+              communities, scholarship, and commerce across a wide region.
+            </p>
+          </article>
+          <article class="empire-card">
+            <h3>Songhai</h3>
+            <span class="dates">c. 1464–1591 CE</span>
+            <p>
+              Based around Gao and the Niger bend, Songhai became a major
+              power in the Sahel and controlled important river and
+              trans-Saharan trade routes before its decline in the late
+              sixteenth century.
+            </p>
+          </article>
+        </div>
+      </section>
+      </section>
+
+      <section class="page-view country-page" data-page-view="countries" aria-label="Countries page" hidden>
+      <section class="country-section" id="countries" aria-labelledby="countries-heading">
+        <div class="section-heading">
+          <div class="eyebrow">A closer look</div>
+          <h2 id="countries-heading">Country-by-country resource stories</h2>
+          <p>
+            Choose a country to jump to its profile. Each locator map highlights
+            that country and shows nearby borders; goldfields, petroleum basins,
+            and historical regions are indicative rather than survey data.
+          </p>
+        </div>
+        <nav class="country-nav" aria-label="Country profile navigation">
+          <a href="#country-senegal">Senegal</a>
+          <a href="#country-mali">Mali</a>
+          <a href="#country-guinea">Guinea</a>
+          <a href="#country-ghana">Ghana</a>
+          <a href="#country-nigeria">Nigeria</a>
+          <a href="#country-algeria">Algeria</a>
+          <a href="#country-libya">Libya</a>
+          <a href="#country-angola">Angola</a>
+          <a href="#country-south-africa">South Africa</a>
+        </nav>
+
+        <article class="country-profile" id="country-senegal">
+          <header class="country-profile-header">
+            <h3>Senegal</h3>
+            <span>Upper Senegal River · Historic gold trade</span>
+          </header>
+          <div class="country-profile-copy">
+            <p>
+              The <strong>Bambuk</strong> gold-producing zone is associated with
+              the upper Senegal River basin, a broad region that crosses today's
+              borders. Gold from this western Sahel network moved through
+              regional markets and trans-Saharan trade; the map's marker is not
+              a modern mine boundary.
+            </p>
+            <p>
+              Senegal's modern geology is varied, and mineral exploration is
+              distinct from the medieval gold trade. Any new discovery would
+              require field evidence, testing, permits, and economic review.
+            </p>
+            <a class="country-source" href="https://www.usgs.gov/centers/national-minerals-information-center" target="_blank" rel="noopener noreferrer">Read USGS mineral information ↗</a>
+          </div>
+          <div class="country-map-frame">
+            <svg class="country-map" data-country-map="Senegal" viewBox="0 0 300 160" role="img" aria-label="Locator map of Senegal and neighboring countries"></svg>
+            <p class="country-map-caption">Senegal and neighboring countries · generalized boundaries</p>
+          </div>
+        </article>
+
+        <article class="country-profile" id="country-mali">
+          <header class="country-profile-header">
+            <h3>Mali</h3>
+            <span>Empire heartland · Niger River · Gold</span>
+          </header>
+          <div class="country-profile-copy">
+            <p>
+              Parts of the <strong>Mali Empire</strong> and later Songhai lay
+              within modern Mali, though both empires extended across changing
+              borders. The Niger River connected cities such as Timbuktu and
+              Gao to trading networks. Gold helped sustain commerce, alongside
+              salt, agriculture, scholarship, and political power.
+            </p>
+            <p>
+              Modern gold mines and exploration areas in western and southern
+              Mali belong to a different era and economy. Their locations do
+              not show that medieval rulers mined the same deposits or
+              controlled today's national territory.
+            </p>
+            <a class="country-source" href="https://www.britannica.com/place/Mali-empire" target="_blank" rel="noopener noreferrer">Read about the Mali Empire ↗</a>
+          </div>
+          <div class="country-map-frame">
+            <svg class="country-map" data-country-map="Mali" viewBox="0 0 300 160" role="img" aria-label="Locator map of Mali and neighboring countries"></svg>
+            <p class="country-map-caption">Mali and neighboring countries · generalized boundaries</p>
+          </div>
+        </article>
+
+        <article class="country-profile" id="country-guinea">
+          <header class="country-profile-header">
+            <h3>Guinea</h3>
+            <span>Upper Niger · Bure goldfield</span>
+          </header>
+          <div class="country-profile-copy">
+            <p>
+              Guinea lies in a region linked to the <strong>Bure</strong>
+              goldfields and the headwaters of major West African rivers.
+              Northeast Guinea also has modern gold-mining districts. These
+              historical and modern locations are regional reference points,
+              not boundaries of a single continuous orebody.
+            </p>
+            <p>
+              Guinea is also known for major bauxite resources. Different
+              minerals form under different geological conditions, so the
+              presence of gold does not by itself predict oil or another
+              deposit nearby.
+            </p>
+            <a class="country-source" href="https://www.usgs.gov/centers/national-minerals-information-center" target="_blank" rel="noopener noreferrer">Read USGS mineral information ↗</a>
+          </div>
+          <div class="country-map-frame">
+            <svg class="country-map" data-country-map="Guinea" viewBox="0 0 300 160" role="img" aria-label="Locator map of Guinea and neighboring countries"></svg>
+            <p class="country-map-caption">Guinea and neighboring countries · generalized boundaries</p>
+          </div>
+        </article>
+
+        <article class="country-profile" id="country-ghana">
+          <header class="country-profile-header">
+            <h3>Ghana</h3>
+            <span>Ashanti gold belt · Gulf of Guinea petroleum</span>
+          </header>
+          <div class="country-profile-copy">
+            <p>
+              <strong>Important distinction:</strong> modern Ghana is not the
+              location of the medieval Ghana Empire (Wagadu), which was farther
+              north. The modern country's gold industry is associated with
+              mineralized belts including the Ashanti region.
+            </p>
+            <p>
+              Ghana also produces oil and gas from offshore fields in the Gulf
+              of Guinea, including the Jubilee field. These are separate
+              geological settings: inland gold deposits are not evidence of
+              offshore petroleum, and neither should be projected onto
+              historical empire borders.
+            </p>
+            <a class="country-source" href="https://www.eia.gov/international/analysis/country/GHA" target="_blank" rel="noopener noreferrer">Read the U.S. EIA Ghana profile ↗</a>
+          </div>
+          <div class="country-map-frame">
+            <svg class="country-map" data-country-map="Ghana" viewBox="0 0 300 160" role="img" aria-label="Locator map of Ghana and neighboring countries"></svg>
+            <p class="country-map-caption">Ghana and neighboring countries · generalized boundaries</p>
+          </div>
+        </article>
+
+        <article class="country-profile" id="country-nigeria">
+          <header class="country-profile-header">
+            <h3>Nigeria</h3>
+            <span>Niger Delta · Oil and natural gas</span>
+          </header>
+          <div class="country-profile-copy">
+            <p>
+              Nigeria's petroleum industry is concentrated in the
+              <strong>Niger Delta and adjoining offshore areas</strong>. Oil
+              was discovered near Oloibiri in 1956, before production and
+              infrastructure expanded. The Delta is a large wetland and
+              sedimentary basin, not one single oilfield.
+            </p>
+            <p>
+              Petroleum revenue has been economically significant, while spills
+              and other impacts have raised long-running concerns for wetlands,
+              livelihoods, and water quality. Resource development brings
+              environmental and governance responsibilities as well as income.
+            </p>
+            <a class="country-source" href="https://www.eia.gov/international/analysis/country/NGA" target="_blank" rel="noopener noreferrer">Read the U.S. EIA Nigeria profile ↗</a>
+          </div>
+          <div class="country-map-frame">
+            <svg class="country-map" data-country-map="Nigeria" viewBox="0 0 300 160" role="img" aria-label="Locator map of Nigeria and neighboring countries"></svg>
+            <p class="country-map-caption">Nigeria and neighboring countries · generalized boundaries</p>
+          </div>
+        </article>
+
+        <article class="country-profile" id="country-algeria">
+          <header class="country-profile-header">
+            <h3>Algeria</h3>
+            <span>Sahara · Hydrocarbon basins</span>
+          </header>
+          <div class="country-profile-copy">
+            <p>
+              Algeria's oil and natural gas fields are found mainly in Saharan
+              sedimentary basins. <strong>Hassi Messaoud</strong> is a major oil
+              field and <strong>Hassi R'Mel</strong> a major gas field; both
+              illustrate why basin geology and exploration history matter
+              more than a simple surface map.
+            </p>
+            <p>
+              Much of the country is arid desert. Water use, infrastructure,
+              transport, and the environmental footprint of extraction are
+              important considerations alongside the resource itself.
+            </p>
+            <a class="country-source" href="https://www.eia.gov/international/analysis/country/ALG" target="_blank" rel="noopener noreferrer">Read the U.S. EIA Algeria profile ↗</a>
+          </div>
+          <div class="country-map-frame">
+            <svg class="country-map" data-country-map="Algeria" viewBox="0 0 300 160" role="img" aria-label="Locator map of Algeria and neighboring countries"></svg>
+            <p class="country-map-caption">Algeria and neighboring countries · generalized boundaries</p>
+          </div>
+        </article>
+
+        <article class="country-profile" id="country-libya">
+          <header class="country-profile-header">
+            <h3>Libya</h3>
+            <span>Sirte Basin · Petroleum</span>
+          </header>
+          <div class="country-profile-copy">
+            <p>
+              Libya's petroleum resources are strongly associated with the
+              <strong>Sirte Basin</strong> and other sedimentary basins.
+              Discoveries beginning in the late 1950s led to oil production
+              becoming central to the modern economy. The map shows a broad
+              region rather than a surveyed field boundary.
+            </p>
+            <p>
+              Petroleum potential depends on buried source rocks, reservoir
+              quality, seals, and preservation. Geology may indicate
+              prospectivity, but only exploration and evaluation can establish
+              a commercial accumulation.
+            </p>
+            <a class="country-source" href="https://www.eia.gov/international/analysis/country/LBY" target="_blank" rel="noopener noreferrer">Read the U.S. EIA Libya profile ↗</a>
+          </div>
+          <div class="country-map-frame">
+            <svg class="country-map" data-country-map="Libya" viewBox="0 0 300 160" role="img" aria-label="Locator map of Libya and neighboring countries"></svg>
+            <p class="country-map-caption">Libya and neighboring countries · generalized boundaries</p>
+          </div>
+        </article>
+
+        <article class="country-profile" id="country-angola">
+          <header class="country-profile-header">
+            <h3>Angola</h3>
+            <span>Atlantic margin · Offshore petroleum</span>
+          </header>
+          <div class="country-profile-copy">
+            <p>
+              Angola's petroleum sector is closely tied to offshore Atlantic
+              sedimentary basins, including deep-water areas. Offshore
+              discoveries require specialized seismic surveys, drilling
+              technology, and substantial investment; a marker on this map
+              cannot indicate depth, reserves, or commercial viability.
+            </p>
+            <p>
+              The location of this modern industry is unrelated to the
+              medieval empires of the western Sahel. Country-level comparisons
+              help show how Africa's resource settings vary widely.
+            </p>
+            <a class="country-source" href="https://www.eia.gov/international/analysis/country/AGO" target="_blank" rel="noopener noreferrer">Read the U.S. EIA Angola profile ↗</a>
+          </div>
+          <div class="country-map-frame">
+            <svg class="country-map" data-country-map="Angola" viewBox="0 0 300 160" role="img" aria-label="Locator map of Angola and neighboring countries"></svg>
+            <p class="country-map-caption">Angola and neighboring countries · generalized boundaries</p>
+          </div>
+        </article>
+
+        <article class="country-profile" id="country-south-africa">
+          <header class="country-profile-header">
+            <h3>South Africa</h3>
+            <span>Witwatersrand Basin · Gold</span>
+          </header>
+          <div class="country-profile-copy">
+            <p>
+              The <strong>Witwatersrand Basin</strong>, near Johannesburg,
+              hosts a famous gold-bearing reef system. Gold discoveries in the
+              1880s helped drive rapid industrial development, urban growth,
+              migration, and profound political and social change.
+            </p>
+            <p>
+              Much of the ore is deep underground, making extraction
+              technically demanding. The history also highlights worker
+              safety, mine waste, water management, and the long-term effects
+              of mining on communities and landscapes.
+            </p>
+            <a class="country-source" href="https://www.usgs.gov/centers/national-minerals-information-center" target="_blank" rel="noopener noreferrer">Read USGS mineral information ↗</a>
+          </div>
+          <div class="country-map-frame">
+            <svg class="country-map" data-country-map="South Africa" viewBox="0 0 300 160" role="img" aria-label="Locator map of South Africa and neighboring countries"></svg>
+            <p class="country-map-caption">South Africa and neighboring countries · generalized boundaries</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="sources-section" id="sources" aria-labelledby="sources-heading">
+        <div class="section-heading">
+          <div class="eyebrow">Further reading</div>
+          <h2 id="sources-heading">Sources &amp; map notes</h2>
+          <p>
+            Historical extents are simplified for comparison. Resource markers
+            are illustrative and do not represent every deposit or guarantee
+            that new resources will be found.
+          </p>
+        </div>
+        <ul class="sources-list">
+          <li><a href="https://www.britannica.com/place/Ghana-historical-empire-Africa" target="_blank" rel="noopener noreferrer">Encyclopaedia Britannica: Ghana Empire</a></li>
+          <li><a href="https://www.britannica.com/place/Mali-empire" target="_blank" rel="noopener noreferrer">Encyclopaedia Britannica: Mali Empire</a></li>
+          <li><a href="https://www.britannica.com/place/Songhai-empire" target="_blank" rel="noopener noreferrer">Encyclopaedia Britannica: Songhai Empire</a></li>
+          <li><a href="https://www.eia.gov/international/analysis/country/GHA" target="_blank" rel="noopener noreferrer">U.S. EIA: Ghana energy profile</a></li>
+          <li><a href="https://www.eia.gov/international/analysis/country/NGA" target="_blank" rel="noopener noreferrer">U.S. EIA: Nigeria energy profile</a></li>
+          <li><a href="https://www.eia.gov/international/analysis/country/ALG" target="_blank" rel="noopener noreferrer">U.S. EIA: Algeria energy profile</a></li>
+          <li><a href="https://www.eia.gov/international/analysis/country/LBY" target="_blank" rel="noopener noreferrer">U.S. EIA: Libya energy profile</a></li>
+          <li><a href="https://www.eia.gov/international/analysis/country/AGO" target="_blank" rel="noopener noreferrer">U.S. EIA: Angola energy profile</a></li>
+          <li><a href="https://www.usgs.gov/centers/national-minerals-information-center" target="_blank" rel="noopener noreferrer">U.S. Geological Survey: mineral information</a></li>
+          <li><a href="https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/" target="_blank" rel="noopener noreferrer">Natural Earth: country boundary data</a></li>
+        </ul>
+        <p class="sources-note">
+          The resource markers indicate selected well-known regions and producing
+          areas, not an exhaustive or live exploration dataset. Country boundaries
+          are generalized Natural Earth data; map projections and simplified
+          historical extents are for education, not navigation or legal use.
+        </p>
+      </section>
+      </section>
+
+      <section class="page-view" data-page-view="discussion" aria-label="Discussion page" hidden>
+      <section class="discussion-section" id="discussion" aria-labelledby="discussion-heading">
+        <div class="section-heading">
+          <div class="eyebrow">Join the conversation</div>
+          <h2 id="discussion-heading">What do you notice?</h2>
+          <p>Share a question or observation about the map and its two timelines.</p>
+        </div>
+        <div class="discussion-card">
+          <div class="discussion-top">
+            <div>
+              <strong>Community discussion</strong>
+              <p>Like the map or add a comment.</p>
+            </div>
+            <button class="like-button" id="like-button" type="button" aria-pressed="false">
+              ♡ Like <span id="like-count">0</span>
+            </button>
+          </div>
+          <form class="comment-form" id="comment-form">
+            <label>
+              Name
+              <input id="comment-name" name="name" maxlength="40" autocomplete="name" required />
+            </label>
+            <label>
+              Comment
+              <textarea id="comment-text" name="comment" maxlength="500" required></textarea>
+            </label>
+            <button class="submit-button" type="submit">Post comment</button>
+            <p class="local-note">
+              Demo discussion: likes and comments are saved only in this browser
+              and are not visible to other visitors.
+            </p>
+          </form>
+          <div class="comments-list" id="comments-list" aria-live="polite"></div>
+        </div>
+      </section>
+      </section>
+    </main>
+
+    <footer>
+      Prepared by Awudi John Anani · UEB0506326 ·
+      <a href="mailto:johnpeterson14@gmail.com">johnpeterson14@gmail.com</a>.
+      An educational map for discussion. Historical and resource locations are
+      simplified and should be checked against specialist sources.
+    </footer>
+
+    <script src="africa-boundaries.js"></script>
+    <script>
+      const svg = document.getElementById("map-drawing");
+      const svgNS = "http://www.w3.org/2000/svg";
+      const project = ([longitude, latitude]) => [
+        28 + (longitude + 20) * 8.25,
+        25 + (37 - latitude) * 8.25
+      ];
+      const countryOutlines = window.africaCountryOutlines;
+      if (!Array.isArray(countryOutlines) || countryOutlines.length === 0) {
+        throw new Error("African country boundary data could not be loaded.");
+      }
+
+      const featuredCountries = new Set([
+        "Senegal", "Mali", "Guinea", "Ghana", "Nigeria",
+        "Algeria", "Libya", "Angola", "South Africa"
+      ]);
+      const parseOutline = (path) => path.split(";").map((point) =>
+        point.split(",").map(Number)
+      );
+      const parsedCountryOutlines = countryOutlines.map(({ name, paths }) => ({
+        name,
+        polygons: paths.map(parseOutline)
+      }));
+
+      function addSvgElement(parent, name, attributes) {
+        const element = document.createElementNS(svgNS, name);
+        Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, value));
+        parent.appendChild(element);
+        return element;
+      }
+
+      function addPath(parent, coordinates, className, label) {
+        const points = coordinates.map((point) => project(point));
+        const path = addSvgElement(parent, "path", {
+          d: `M ${points.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join(" L ")} Z`,
+          class: className
+        });
+        if (label) {
+          const title = addSvgElement(path, "title", {});
+          title.textContent = label;
+        }
+        return path;
+      }
+
+      const grid = addSvgElement(svg, "g", { "aria-hidden": "true" });
+      [-10, 0, 10, 20, 30, 40, 50].forEach((longitude) => {
+        const [x1, y1] = project([longitude, 37]);
+        const [x2, y2] = project([longitude, -35]);
+        addSvgElement(grid, "line", {
+          x1, y1, x2, y2, class: "graticule"
+        });
+      });
+      [-30, -20, -10, 0, 10, 20, 30].forEach((latitude) => {
+        const [x1, y1] = project([-20, latitude]);
+        const [x2, y2] = project([50, latitude]);
+        addSvgElement(grid, "line", {
+          x1, y1, x2, y2, class: "graticule"
+        });
+      });
+
+      const countryLayer = addSvgElement(svg, "g", {
+        "aria-label": "African country boundaries"
+      });
+      parsedCountryOutlines.forEach(({ name, polygons }) => {
+        polygons.forEach((coordinates) => {
+          const path = addPath(
+            countryLayer,
+            coordinates,
+            `country-boundary${featuredCountries.has(name) ? " featured" : ""}`,
+            name
+          );
+          path.dataset.layer = "countries";
+          path.dataset.country = name;
+        });
+      });
+
+      const empireRegions = [
+        {
+          id: "ghana",
+          label: "Ghana Empire — approximate extent",
+          points: [[-16, 15], [-14, 20], [-9, 22], [-5, 20], [-3, 17], [-5, 12], [-9, 10], [-13, 11]]
+        },
+        {
+          id: "mali",
+          label: "Mali Empire — approximate extent",
+          points: [[-16, 18], [-13, 24], [-8, 25], [-3, 23], [2, 20], [3, 15], [1, 10], [-4, 8], [-9, 9], [-14, 12]]
+        },
+        {
+          id: "songhai",
+          label: "Songhai Empire — approximate extent",
+          points: [[-13, 20], [-8, 25], [-3, 25], [3, 24], [8, 21], [10, 17], [8, 13], [4, 12], [0, 14], [-4, 16], [-9, 16]]
+        }
+      ];
+      empireRegions.forEach(({ id, label, points }) => {
+        addPath(svg, points, `empire ${id}`, label).dataset.layer = id;
+      });
+
+      const labels = [
+        ["Timbuktu", -3, 16.8],
+        ["Gao", 0.2, 16.3],
+        ["Niger River", 2, 12.2],
+        ["Gulf of Guinea", 1, 0]
+      ];
+      labels.forEach(([text, longitude, latitude]) => {
+        const [x, y] = project([longitude, latitude]);
+        const label = addSvgElement(svg, "text", { x, y, class: "map-label" });
+        label.textContent = text;
+      });
+
+      const countryLabels = [
+        ["SENEGAL", -14.1, 12.7],
+        ["MALI", -3.1, 21.7],
+        ["GUINEA", -11.4, 8.5],
+        ["GHANA", -1.2, 10.4],
+        ["NIGERIA", 8.4, 11.6],
+        ["ALGERIA", 8.1, 30.7],
+        ["LIBYA", 19.5, 24.7],
+        ["ANGOLA", 17.1, -14.5],
+        ["SOUTH AFRICA", 24.8, -31.4]
+      ];
+      countryLabels.forEach(([text, longitude, latitude]) => {
+        const [x, y] = project([longitude, latitude]);
+        const label = addSvgElement(svg, "text", {
+          x, y, class: "map-label country-label"
+        });
+        label.dataset.layer = "country-names";
+        label.textContent = text;
+      });
+
+      const resources = [
+        { kind: "gold", name: "Bambuk goldfield", coordinates: [-11.5, 13.5], mapLabel: "Bambuk", countries: ["Senegal", "Mali"] },
+        { kind: "gold", name: "Bure goldfield", coordinates: [-9.5, 10.5], countries: ["Guinea"] },
+        { kind: "gold", name: "Ashanti gold region, Ghana", coordinates: [-1.5, 6.7], mapLabel: "Ashanti", countries: ["Ghana"] },
+        { kind: "gold", name: "Witwatersrand gold region, South Africa", coordinates: [28, -26], mapLabel: "Witwatersrand", countries: ["South Africa"] },
+        { kind: "oil", name: "Ghana offshore petroleum region", coordinates: [-2.5, 4.5], mapLabel: "Ghana offshore", countries: ["Ghana"] },
+        { kind: "oil", name: "Niger Delta petroleum region", coordinates: [5.5, 4.5], mapLabel: "Niger Delta", countries: ["Nigeria"] },
+        { kind: "oil", name: "Algerian petroleum region", coordinates: [3, 28], mapLabel: "Algeria", countries: ["Algeria"] },
+        { kind: "oil", name: "Libyan petroleum region", coordinates: [17, 28], mapLabel: "Libya", countries: ["Libya"] },
+        { kind: "oil", name: "Angola petroleum region", coordinates: [12, -8], mapLabel: "Angola", countries: ["Angola"] }
+      ];
+
+      resources.forEach(({ kind, name, coordinates, mapLabel, countries }) => {
+        const [x, y] = project(coordinates);
+        const marker = addSvgElement(svg, "g", {
+          class: `resource-marker ${kind}`,
+          tabindex: "0",
+          role: "img",
+          "aria-label": `${kind === "gold" ? "Gold" : "Petroleum"}: ${name}`
+        });
+        marker.dataset.layer = kind;
+        marker.dataset.countries = countries.join(",");
+        const title = addSvgElement(marker, "title", {});
+        title.textContent = name;
+        addSvgElement(marker, "circle", { cx: x, cy: y, r: 2 });
+        if (mapLabel) {
+          const text = addSvgElement(marker, "text", { x, y: y - 3.5 });
+          text.textContent = mapLabel;
+        }
+      });
+
+      function getBounds(coordinates) {
+        return coordinates.reduce((bounds, [longitude, latitude]) => ({
+          minX: Math.min(bounds.minX, longitude),
+          maxX: Math.max(bounds.maxX, longitude),
+          minY: Math.min(bounds.minY, latitude),
+          maxY: Math.max(bounds.maxY, latitude)
+        }), { minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity });
+      }
+
+      function boundsIntersect(first, second) {
+        return first.minX <= second.maxX && first.maxX >= second.minX &&
+          first.minY <= second.maxY && first.maxY >= second.minY;
+      }
+
+      document.querySelectorAll("[data-country-map]").forEach((countryMap) => {
+        const countryName = countryMap.dataset.countryMap;
+        const target = parsedCountryOutlines.find(({ name }) => name === countryName);
+        if (!target) {
+          throw new Error(`Missing outline data for ${countryName}.`);
+        }
+
+        const targetBounds = target.polygons.reduce((bounds, polygon) => {
+          const polygonBounds = getBounds(polygon);
+          return {
+            minX: Math.min(bounds.minX, polygonBounds.minX),
+            maxX: Math.max(bounds.maxX, polygonBounds.maxX),
+            minY: Math.min(bounds.minY, polygonBounds.minY),
+            maxY: Math.max(bounds.maxY, polygonBounds.maxY)
+          };
+        }, { minX: Infinity, maxX: -Infinity, minY: Infinity, maxY: -Infinity });
+
+        const padding = Math.max(
+          1.8,
+          Math.max(targetBounds.maxX - targetBounds.minX, targetBounds.maxY - targetBounds.minY) * .22
+        );
+        const viewBounds = {
+          minX: targetBounds.minX - padding,
+          maxX: targetBounds.maxX + padding,
+          minY: targetBounds.minY - padding,
+          maxY: targetBounds.maxY + padding
+        };
+        const width = Number(countryMap.viewBox.baseVal.width);
+        const height = Number(countryMap.viewBox.baseVal.height);
+        const scale = Math.min(
+          (width - 24) / (viewBounds.maxX - viewBounds.minX),
+          (height - 24) / (viewBounds.maxY - viewBounds.minY)
+        );
+        const offsetX = (width - (viewBounds.maxX - viewBounds.minX) * scale) / 2;
+        const offsetY = (height - (viewBounds.maxY - viewBounds.minY) * scale) / 2;
+        const localProject = ([longitude, latitude]) => [
+          offsetX + (longitude - viewBounds.minX) * scale,
+          offsetY + (viewBounds.maxY - latitude) * scale
+        ];
+
+        parsedCountryOutlines.forEach(({ name, polygons }) => {
+          polygons.forEach((coordinates) => {
+            if (!boundsIntersect(getBounds(coordinates), viewBounds)) return;
+            const points = coordinates.map(localProject);
+            const path = addSvgElement(countryMap, "path", {
+              d: `M ${points.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join(" L ")} Z`,
+              class: `country-boundary${name === countryName ? " featured" : ""}`
+            });
+            const title = addSvgElement(path, "title", {});
+            title.textContent = name;
+          });
+        });
+
+        resources.filter(({ countries }) => countries.includes(countryName))
+          .forEach(({ kind, name, coordinates }) => {
+            const [x, y] = localProject(coordinates);
+            const marker = addSvgElement(countryMap, "g", {
+              class: `resource-marker ${kind}`,
+              role: "img",
+              "aria-label": `${kind === "gold" ? "Gold" : "Petroleum"}: ${name}`
+            });
+            const title = addSvgElement(marker, "title", {});
+            title.textContent = name;
+            addSvgElement(marker, "circle", { cx: x, cy: y, r: 2.2 });
+          });
+
+        const labelPosition = localProject([
+          (targetBounds.minX + targetBounds.maxX) / 2,
+          (targetBounds.minY + targetBounds.maxY) / 2
+        ]);
+        const label = addSvgElement(countryMap, "text", {
+          x: labelPosition[0],
+          y: labelPosition[1],
+          class: "country-map-label"
+        });
+        label.textContent = countryName.toUpperCase();
+      });
+
+      document.querySelectorAll(".map-tools button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const visible = button.getAttribute("aria-pressed") !== "true";
+          button.setAttribute("aria-pressed", String(visible));
+          document.querySelectorAll(`#africa-map [data-layer="${button.dataset.layer}"]`).forEach((feature) => {
+            feature.style.display = visible ? "" : "none";
+          });
+        });
+      });
+
+      const likeButton = document.getElementById("like-button");
+      const likeCount = document.getElementById("like-count");
+      const likedKey = "empires-earth-liked";
+      const likesKey = "empires-earth-likes";
+      let liked = localStorage.getItem(likedKey) === "true";
+      let likes = Number(localStorage.getItem(likesKey) || 0);
+
+      function updateLikes() {
+        likeButton.setAttribute("aria-pressed", String(liked));
+        likeButton.innerHTML = `${liked ? "♥ Liked" : "♡ Like"} <span id="like-count">${likes}</span>`;
+      }
+
+      likeButton.addEventListener("click", () => {
+        liked = !liked;
+        likes = Math.max(0, likes + (liked ? 1 : -1));
+        localStorage.setItem(likedKey, String(liked));
+        localStorage.setItem(likesKey, String(likes));
+        updateLikes();
+      });
+      updateLikes();
+
+      const commentsKey = "empires-earth-comments";
+      const commentsList = document.getElementById("comments-list");
+      let comments = JSON.parse(localStorage.getItem(commentsKey) || "[]");
+
+      function renderComments() {
+        commentsList.replaceChildren();
+        if (comments.length === 0) {
+          const empty = document.createElement("p");
+          empty.className = "empty-comments";
+          empty.textContent = "No comments yet. Start the conversation.";
+          commentsList.appendChild(empty);
+          return;
+        }
+        comments.slice().reverse().forEach((comment) => {
+          const article = document.createElement("article");
+          article.className = "comment";
+          const author = document.createElement("strong");
+          author.textContent = comment.name;
+          const date = document.createElement("time");
+          date.dateTime = comment.date;
+          date.textContent = new Date(comment.date).toLocaleDateString();
+          const message = document.createElement("p");
+          message.textContent = comment.text;
+          article.append(author, date, message);
+          commentsList.appendChild(article);
+        });
+      }
+
+      document.getElementById("comment-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("comment-name").value.trim();
+        const text = document.getElementById("comment-text").value.trim();
+        if (!name || !text) return;
+        comments.push({ name, text, date: new Date().toISOString() });
+        localStorage.setItem(commentsKey, JSON.stringify(comments));
+        event.currentTarget.reset();
+        renderComments();
+      });
+
+      renderComments();
+
+      const pageNames = new Set(["home", "empires", "countries", "discussion"]);
+
+      function routeFromHash() {
+        const hash = window.location.hash.slice(1);
+        if (hash.startsWith("page-")) {
+          const route = hash.slice(5);
+          if (pageNames.has(route)) return { page: route };
+        }
+        if (hash.startsWith("country-")) return { page: "countries", target: hash };
+        if (hash === "map" || hash === "history") return { page: "empires", target: hash };
+        if (hash === "countries" || hash === "sources") return { page: "countries", target: hash };
+        if (hash === "discussion") return { page: "discussion", target: hash };
+        return { page: "home" };
+      }
+
+      function displayRoute() {
+        const route = routeFromHash();
+        document.querySelectorAll("[data-page-view]").forEach((view) => {
+          view.hidden = view.dataset.pageView !== route.page;
+        });
+        document.querySelectorAll("[data-page-link]").forEach((link) => {
+          if (link.dataset.pageLink === route.page) {
+            link.setAttribute("aria-current", "page");
+          } else {
+            link.removeAttribute("aria-current");
+          }
+        });
+
+        requestAnimationFrame(() => {
+          if (route.target) {
+            document.getElementById(route.target)?.scrollIntoView({ block: "start" });
+          } else {
+            window.scrollTo(0, 0);
+          }
+        });
+      }
+
+      window.addEventListener("hashchange", displayRoute);
+      displayRoute();
+    </script>
+  </body>
+</html>
