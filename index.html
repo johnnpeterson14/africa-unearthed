@@ -540,20 +540,19 @@
         padding-inline: 16px;
       }
       .local-note { margin: 0; color: var(--muted); font-size: 11px; }
-      .comments-list { display: grid; gap: 13px; }
-      .comment {
-        padding: 13px 15px;
-        border-radius: 5px;
-        background: #f2f0e8;
+      .discussion-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px;
+        margin-top: 18px;
       }
-      .comment strong {
-        color: var(--green);
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
+
+      .discussion-actions .submit-button {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
       }
-      .comment time { margin-left: 8px; color: #7d877f; font-size: 11px; }
-      .comment p { margin: 5px 0 0; color: #45554a; font-size: 14px; overflow-wrap: anywhere; }
-      .empty-comments { margin: 0; color: var(--muted); font-size: 14px; }
 
       footer {
         padding: 24px;
@@ -1488,28 +1487,30 @@
           <div class="discussion-top">
             <div>
               <strong>Community discussion</strong>
-              <p>Like the map or add a comment.</p>
+              <p>Join the public conversation on GitHub Discussions.</p>
             </div>
-            <button class="like-button" id="like-button" type="button" aria-pressed="false">
-              ♡ Like <span id="like-count">0</span>
-            </button>
+            <a
+              class="like-button"
+              href="https://github.com/johnnpeterson14/africa-unearthed/discussions"
+              target="_blank"
+              rel="noopener"
+            >
+              Open discussions
+            </a>
           </div>
-          <form class="comment-form" id="comment-form">
-            <label>
-              Name
-              <input id="comment-name" name="name" maxlength="40" autocomplete="name" required />
-            </label>
-            <label>
-              Comment
-              <textarea id="comment-text" name="comment" maxlength="500" required></textarea>
-            </label>
-            <button class="submit-button" type="submit">Post comment</button>
+          <div class="discussion-actions">
+            <a
+              class="submit-button"
+              href="https://github.com/johnnpeterson14/africa-unearthed/discussions/new"
+              target="_blank"
+              rel="noopener"
+            >
+              Start a public discussion
+            </a>
             <p class="local-note">
-              Demo discussion: likes and comments are saved only in this browser
-              and are not visible to other visitors.
+              Public discussions are hosted on GitHub and visible to all visitors.
             </p>
-          </form>
-          <div class="comments-list" id="comments-list" aria-live="polite"></div>
+          </div>
         </div>
       </section>
       </section>
@@ -1785,68 +1786,6 @@
           });
         });
       });
-
-      const likeButton = document.getElementById("like-button");
-      const likeCount = document.getElementById("like-count");
-      const likedKey = "empires-earth-liked";
-      const likesKey = "empires-earth-likes";
-      let liked = localStorage.getItem(likedKey) === "true";
-      let likes = Number(localStorage.getItem(likesKey) || 0);
-
-      function updateLikes() {
-        likeButton.setAttribute("aria-pressed", String(liked));
-        likeButton.innerHTML = `${liked ? "♥ Liked" : "♡ Like"} <span id="like-count">${likes}</span>`;
-      }
-
-      likeButton.addEventListener("click", () => {
-        liked = !liked;
-        likes = Math.max(0, likes + (liked ? 1 : -1));
-        localStorage.setItem(likedKey, String(liked));
-        localStorage.setItem(likesKey, String(likes));
-        updateLikes();
-      });
-      updateLikes();
-
-      const commentsKey = "empires-earth-comments";
-      const commentsList = document.getElementById("comments-list");
-      let comments = JSON.parse(localStorage.getItem(commentsKey) || "[]");
-
-      function renderComments() {
-        commentsList.replaceChildren();
-        if (comments.length === 0) {
-          const empty = document.createElement("p");
-          empty.className = "empty-comments";
-          empty.textContent = "No comments yet. Start the conversation.";
-          commentsList.appendChild(empty);
-          return;
-        }
-        comments.slice().reverse().forEach((comment) => {
-          const article = document.createElement("article");
-          article.className = "comment";
-          const author = document.createElement("strong");
-          author.textContent = comment.name;
-          const date = document.createElement("time");
-          date.dateTime = comment.date;
-          date.textContent = new Date(comment.date).toLocaleDateString();
-          const message = document.createElement("p");
-          message.textContent = comment.text;
-          article.append(author, date, message);
-          commentsList.appendChild(article);
-        });
-      }
-
-      document.getElementById("comment-form").addEventListener("submit", (event) => {
-        event.preventDefault();
-        const name = document.getElementById("comment-name").value.trim();
-        const text = document.getElementById("comment-text").value.trim();
-        if (!name || !text) return;
-        comments.push({ name, text, date: new Date().toISOString() });
-        localStorage.setItem(commentsKey, JSON.stringify(comments));
-        event.currentTarget.reset();
-        renderComments();
-      });
-
-      renderComments();
 
       const pageNames = new Set(["home", "empires", "countries", "discussion"]);
 
