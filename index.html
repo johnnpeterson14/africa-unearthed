@@ -1568,28 +1568,31 @@
           <div class="discussion-top">
             <div>
               <strong>Community discussion</strong>
-              <p>Ask a question or share a thought with the public discussion.</p>
+              <p>Join the public conversation on GitHub Discussions.</p>
             </div>
+            <a
+              class="like-button"
+              href="https://github.com/johnnpeterson14/africa-unearthed/discussions"
+              target="_blank"
+              rel="noopener"
+            >
+              Open discussions
+            </a>
           </div>
 
-          <form class="discussion-form" id="discussion-form">
-            <label>
-              Name
-              <input id="discussion-name" name="name" maxlength="40" autocomplete="name" required />
-            </label>
-            <label>
-              Comment
-              <textarea id="discussion-message" name="message" maxlength="500" required></textarea>
-            </label>
-            <button class="submit-button" type="submit">Post comment</button>
-            <p class="status-message" id="discussion-status">Loading discussion…</p>
-          </form>
-
-          <div class="comments-list" id="comments-list" aria-live="polite"></div>
-
-          <p class="local-note">
-            Comments are stored in Supabase and visible to all visitors.
-          </p>
+          <div class="discussion-actions">
+            <a
+              class="submit-button"
+              href="https://github.com/johnnpeterson14/africa-unearthed/discussions/new"
+              target="_blank"
+              rel="noopener"
+            >
+              Start a public discussion
+            </a>
+            <p class="local-note">
+              Public discussions are hosted on GitHub and visible to all visitors.
+            </p>
+          </div>
         </div>
       </section>
       </section>
@@ -1603,112 +1606,8 @@
       <div class="footer-project">MEC101 mini project</div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script src="africa-boundaries.js"></script>
     <script>
-      const SUPABASE_URL = "https://YOUR_PROJECT_REF.supabase.co";
-      const SUPABASE_ANON_KEY = "YOUR_SUPABASE_ANON_KEY";
-
-      const discussionForm = document.getElementById("discussion-form");
-      const discussionName = document.getElementById("discussion-name");
-      const discussionMessage = document.getElementById("discussion-message");
-      const discussionStatus = document.getElementById("discussion-status");
-      const commentsList = document.getElementById("comments-list");
-
-      function showStatus(message, isError = false) {
-        discussionStatus.textContent = message;
-        discussionStatus.style.color = isError ? "#9f4b3d" : "#64736a";
-      }
-
-      function renderDiscussionComments(comments) {
-        commentsList.replaceChildren();
-        if (!Array.isArray(comments) || comments.length === 0) {
-          const empty = document.createElement("p");
-          empty.className = "empty-comments";
-          empty.textContent = "No comments yet. Start the conversation.";
-          commentsList.appendChild(empty);
-          return;
-        }
-
-        comments.forEach((comment) => {
-          const article = document.createElement("article");
-          article.className = "comment";
-
-          const header = document.createElement("div");
-          header.className = "comment-header";
-
-          const author = document.createElement("strong");
-          author.textContent = comment.name || "Guest";
-
-          const date = document.createElement("time");
-          const createdAt = comment.created_at || new Date().toISOString();
-          date.dateTime = createdAt;
-          date.textContent = new Date(createdAt).toLocaleDateString();
-
-          header.append(author, date);
-
-          const message = document.createElement("p");
-          message.textContent = comment.message || "";
-
-          article.append(header, message);
-          commentsList.appendChild(article);
-        });
-      }
-
-      async function loadDiscussionComments() {
-        if (!window.supabase || !SUPABASE_URL.includes("supabase.co") || SUPABASE_ANON_KEY.includes("YOUR_")) {
-          renderDiscussionComments([]);
-          showStatus("Add your Supabase URL and anon key to enable live public comments.");
-          return;
-        }
-
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
-        const { data, error } = await supabase
-          .from("discussion_posts")
-          .select("*")
-          .order("created_at", { ascending: false });
-
-        if (error) {
-          renderDiscussionComments([]);
-          showStatus(error.message, true);
-          return;
-        }
-
-        renderDiscussionComments(data || []);
-        showStatus(`Showing ${data?.length || 0} public comment${(data?.length || 0) === 1 ? "" : "s"}.`);
-      }
-
-      discussionForm.addEventListener("submit", async (event) => {
-        event.preventDefault();
-
-        if (!window.supabase || !SUPABASE_URL.includes("supabase.co") || SUPABASE_ANON_KEY.includes("YOUR_")) {
-          showStatus("Add your Supabase URL and anon key to enable posting comments.", true);
-          return;
-        }
-
-        const name = discussionName.value.trim() || "Guest";
-        const message = discussionMessage.value.trim();
-
-        if (!message) {
-          showStatus("Please enter a comment before submitting.", true);
-          return;
-        }
-
-        const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-        const { error } = await supabase.from("discussion_posts").insert([{ name, message }]);
-
-        if (error) {
-          showStatus(error.message, true);
-          return;
-        }
-
-        discussionForm.reset();
-        showStatus("Comment posted successfully.");
-        await loadDiscussionComments();
-      });
-
-      loadDiscussionComments();
       const svg = document.getElementById("map-drawing");
       const svgNS = "http://www.w3.org/2000/svg";
       const project = ([longitude, latitude]) => [
